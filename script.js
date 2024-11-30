@@ -3,9 +3,19 @@ document.getElementById("convert-button").addEventListener("click", function () 
     const fromCurrency = document.getElementById("from-currency").value;
     const toCurrency = document.getElementById("to-currency").value;
 
+    const resultMessage = document.getElementById("result-message");
+    const errorMessage = document.getElementById("error-message");
+
+    resultMessage.style.display = "none";
+    errorMessage.style.display = "none";
+
     if (amount && fromCurrency && toCurrency) {
-        alert(`Convert ${amount} from ${fromCurrency} to ${toCurrency}`);
+        resultMessage.textContent = `${amount} ${fromCurrency} = ${(
+            amount * 84.0752
+        ).toFixed(2)} ${toCurrency}`;
+        resultMessage.style.display = "block";
     } else {
-        alert("Please fill in all fields.");
+        errorMessage.textContent = "An error occurred, please try again later";
+        errorMessage.style.display = "block";
     }
 });
