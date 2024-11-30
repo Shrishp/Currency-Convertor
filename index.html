@@ -12,6 +12,25 @@
     <form id="converterForm">
       <label for="amount">Enter amount:</label>
       <input type="number" id="amount" name="amount" placeholder="100" required>
+      
+      <div class="currency-selection">
+        <label for="fromCurrency">From:</label>
+        <select id="fromCurrency" name="fromCurrency" required>
+          <option value="USD">USD - United States Dollar</option>
+          <option value="INR">INR - Indian Rupee</option>
+          <!-- Add more options as needed -->
+        </select>
+
+        <span class="to-label">TO</span>
+
+        <label for="toCurrency">To:</label>
+        <select id="toCurrency" name="toCurrency" required>
+          <option value="USD">USD - United States Dollar</option>
+          <option value="INR">INR - Indian Rupee</option>
+          <!-- Add more options as needed -->
+        </select>
+      </div>
+
       <button type="submit">Convert</button>
     </form>
   </div>
