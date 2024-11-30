@@ -1,42 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Currency Converter</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Currency Converter</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="converter-container">
-        <h1>Currency Converter</h1>
-        <label for="amount">Enter amount:</label>
-        <input 
-            type="number" 
-            id="amount" 
-            name="amount" 
-            placeholder="100" 
-            required 
-        />
-        
-        <div class="dropdown-container">
-            <select id="from-currency" name="from-currency" required>
-                <option value="" disabled selected>USD - United States Dollar</option>
-                <option value="INR">INR - Indian Rupee</option>
-            </select>
-            <span class="to-label">TO</span>
-            <select id="to-currency" name="to-currency" required>
-                <option value="" disabled selected>INR - Indian Rupee</option>
-                <option value="USD">USD - United States Dollar</option>
-            </select>
-        </div>
-        
-        <button type="button" id="convert-button">Convert</button>
-        
-        <!-- Result and Error Messages -->
-        <p id="result-message" class="result-message">100 USD = 8,407.52 INR</p>
-        <p id="error-message" class="error-message">An error occurred, please try again later</p>
+
+  <div class="content">
+    <h1>Currency Converter</h1>
+
+    <input type="number" id="amount" placeholder="Enter amount" required />
+
+    <div class="dropdown-container">
+      <select id="fromCurrency"></select>
+      <span class="to-label">TO</span>
+      <select id="toCurrency"></select>
     </div>
 
-    <script src="script.js"></script>
+    <button id="convertBtn">Convert</button>
+
+    <div id="result" class="result"></div>
+    <div id="error" class="error"></div>
+  </div>
+  <script src="script.js" defer></script>
 </body>
 </html>
