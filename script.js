@@ -2,7 +2,6 @@ const apiKey = "228e444e4acafd673e1a2f32";
 const countryApiUrl = "https://restcountries.com/v3.1/all?fields=name,currencies,flags";
 const exchangeApiUrl = "https://api.exchangerate-api.com/v4/latest/";
 
-// Fetch country data for currencies
 fetch(countryApiUrl)
   .then(response => response.json())
   .then(data => {
@@ -10,7 +9,6 @@ fetch(countryApiUrl)
     const toCurrencySelect = document.getElementById('toCurrency');
     const currencyOptions = {};
 
-    // Populate currency dropdowns with country data
     data.forEach(country => {
       if (country.currencies) {
         for (let code in country.currencies) {
